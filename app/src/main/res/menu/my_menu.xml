@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <item android:id="@+id/opcion1"
+        android:title="guardar"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_launcher_foreground"/>
+
+    <item android:id="@+id/opcion2"
+        android:title="enviar"
+        app:showAsAction="never"
+
+        />
+
+    <item android:id="@+id/opcion3"
+        android:title="salir"
+        app:showAsAction="always"
+        android:icon="@drawable/baseline_exit_to_app_24"/>
+    />
+
+</menu>
