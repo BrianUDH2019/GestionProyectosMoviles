@@ -1,5 +1,6 @@
 plugins {
     id("com.android.application")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -32,6 +33,17 @@ android {
 }
 
 dependencies {
+    implementation(platform("com.google.firebase:firebase-bom:32.5.0"))
+    implementation("com.google.firebase:firebase-analytics")
+
+    implementation ("com.firebaseui:firebase-ui-database:8.0.2")
+    implementation ("com.firebaseui:firebase-ui-firestore:8.0.2")
+    implementation ("com.firebaseui:firebase-ui-auth:8.0.2")
+    implementation ("com.firebaseui:firebase-ui-storage:8.0.2")
+
+    implementation ("com.google.firebase:firebase-core:21.1.1")
+
+
 
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.10.0")

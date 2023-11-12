@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "894745477497",
+    "firebase_url": "https://test-da7cf-default-rtdb.firebaseio.com",
+    "project_id": "test-da7cf",
+    "storage_bucket": "test-da7cf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:894745477497:android:e63dc2ef58fcf006b6efa8",
+        "android_client_info": {
+          "package_name": "com.brian.crud"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxeWkf45pMeE4-r8JpDpdeCp7mJXgVFds"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:894745477497:android:66a08d66a8d423b2b6efa8",
+        "android_client_info": {
+          "package_name": "com.brian.gestionproyectosmoviles"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxeWkf45pMeE4-r8JpDpdeCp7mJXgVFds"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:894745477497:android:aa1a70a69f0f3442b6efa8",
+        "android_client_info": {
+          "package_name": "com.pluartz.test"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxeWkf45pMeE4-r8JpDpdeCp7mJXgVFds"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
