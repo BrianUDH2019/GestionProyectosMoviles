@@ -18,6 +18,7 @@ import com.google.firebase.firestore.Query;
 
 public class MainActivity extends AppCompatActivity {
 
+    Button btn_add;
     RecyclerView mRecycler;
     PersonaAdapter mAdapter;
     FirebaseFirestore mFirestore;
@@ -41,7 +42,13 @@ public class MainActivity extends AppCompatActivity {
         mRecycler.setAdapter(mAdapter);
 
 
-
+        btn_add = findViewById(R.id.btn_add);
+        btn_add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, CreatePersonaActivity.class));
+            }
+        });
 
     }
 

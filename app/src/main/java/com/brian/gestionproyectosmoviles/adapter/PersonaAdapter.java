@@ -1,6 +1,7 @@
 package com.brian.gestionproyectosmoviles.adapter;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.brian.gestionproyectosmoviles.CreatePersonaActivity;
 import com.brian.gestionproyectosmoviles.R;
 import com.brian.gestionproyectosmoviles.model.Persona;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
@@ -39,12 +41,22 @@ public class PersonaAdapter extends FirestoreRecyclerAdapter<Persona, PersonaAda
     @Override
     protected void onBindViewHolder(@NonNull ViewHolder viewHolder, int i, @NonNull Persona Persona) {
 
-        DocumentSnapshot documentSnapshot = getSnapshots().getSnapshot(viewHolder.getAdapterPosition());
+        DocumentSnapshot documentSnapshot = getSnapshots().getSnapshot(viewHolder.getAbsoluteAdapterPosition());
         final String id = documentSnapshot.getId();
 
         viewHolder.name.setText(Persona.getName());
         viewHolder.code.setText(Persona.getCode());
         viewHolder.percentage.setText(Persona.getPercentage());
+        viewHolder.btn_edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(activity, CreatePersonaActivity.class);
+                i.putExtra("id_persona",id);
+                activity.startActivity(i);
+
+            }
+        });
+
 
         viewHolder.btn_delete.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,7 +88,7 @@ public class PersonaAdapter extends FirestoreRecyclerAdapter<Persona, PersonaAda
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        ImageView btn_delete;
+        ImageView btn_delete, btn_edit;
         TextView name, code, percentage;
 
         public ViewHolder(@NonNull View itemView) {
@@ -86,6 +98,8 @@ public class PersonaAdapter extends FirestoreRecyclerAdapter<Persona, PersonaAda
             code = itemView.findViewById(R.id.codigo);
             percentage = itemView.findViewById(R.id.porcentaje);
             btn_delete = itemView.findViewById(R.id.btn_eliminar);
+            btn_edit = itemView.findViewById(R.id.btn_editar);
+
 
         }
     }
